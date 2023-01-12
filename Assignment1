@@ -1,0 +1,19 @@
+Q1. Difference between padding and margin?
+Ans. 
+                                                                MARGIN vs PADDING :
+1. Margin is used in an element to create distance between that element and other elements of page. Where padding is used to create distance between content and border of an element.
+2. Margin is not part of an element where padding is part of element.
+    MAIN DIFFERENCE.
+Padding - defines space between border and element content 
+Margin - defines space between border and other outer elements 
+
+Q2. Difference between display,visibility,opacity,z-index in CSS?
+
+Ans.
+        display is a CSS property that specifies the type of layout box an HTML element should use. Some common values include block, which creates a block-level element that takes up the full width of its parent container and creates a new line after it, and inline, which creates an inline element that only takes up as much width as necessary and does not create a new line.
+
+   visibility is a CSS property that specifies whether an element should be visible or not. If an element has a visibility of hidden, it will be invisible but still take up space in the layout. If an element has a visibility of collapse, it will be removed from the layout entirely.
+   opacity is a CSS property that specifies the transparency of an element. An element with an opacity of 1 is completely opaque, while an element with an opacity of 0 is completely transparent.
+   z-index is a CSS property that specifies the stack order of an element. An element with a higher z-index will appear in front of an element with a lower z-index.
+ Note:  z-index only works on positioned elements (position: absolute, position: relative,        position: fixed, or position: sticky) and flex items (elements that are direct children of display:flex elements).
+Note:  If two positioned elements overlap without a z-index specified, the element positioned last in the HTML code will be shown on top. 
