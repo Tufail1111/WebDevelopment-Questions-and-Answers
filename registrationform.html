@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        margin-top: 10px;
+        padding: 10px;
+      }
+      form {
+        border: 2px solid red;
+        padding: 10px;
+        justify-content: center;
+        margin-top: 5%;
+      }
+      input:invalid{
+        border: 2px dashed red;
+      }
+      input:valid{
+        border:2px dashed green;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <div>
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="fname" required /><span aria-label="required">*</span>
+      </div>
+      <div>
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lname" required /><span aria-label="required">*</span>
+      </div>
+      <div>
+        <label for="male">Male</label>
+        <input type="radio" id="male" name="gender" />
+        <label for="female">Female</label>
+        <input type="radio" id="female" name="gender" />
+      </div>
+      <div>
+        <label for="birthday">Birthday</label>
+        <input type="date" id="birthday" name="birthday" required /><span aria-label="required">*</span>
+      </div>
+      <div>
+        <label for="district">District</label>
+        <select name="district" id="district">
+          <option>Srinagar</option>
+          <option>Budgam</option>
+          <option>Baramulla</option>
+          <option>Kupwara</option>
+        </select>
+      </div>
+      <div>
+        <label for="textarea">Address</label>
+        <textarea id="textarea" name="address" rows="5" maxlength="300">Commment text..... </textarea>
+        <p id="characterCount"></p>
+        
+      </div>
+      <input type="submit" value="submit" />
+    </form>
+  </body>
+<script>
+  var textarea = document.getElementById("textarea");
+  var characterCount = document.getElementById("characterCount");
+
+  textarea.oninput=function() {
+    characterCount.innerHTML = "Character count: " + textarea.value.length;
+  };
+</script>
+</html>
