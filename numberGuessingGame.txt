@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Number Guessing Game</title>
+  </head>
+  <body>
+    <h1>Number Guessing Game</h1>
+    <p>Guess a number between 1 and 100:</p>
+    <input type="number" id="guess" />
+    <button onclick="checkGuess()">Guess</button>
+    <p id="answer"></p>
+    <script>
+      var guessNumber = 56;
+
+      function checkGuess() {
+        var userGuess = document.getElementById("guess").value;
+        var answer = document.getElementById("answer");
+
+        if (userGuess == guessNumber) {
+            document.body.style.background="green";
+          answer.innerHTML = "Congratulations! You guessed the number!";
+        } else if (userGuess > guessNumber) {
+            document.body.style.background="red";
+          answer.innerHTML = "Too large. Try again.";
+        } else {
+            document.body.style.background="red";
+          answer.innerHTML = "Too small. Try again.";
+        }
+      }
+    </script>
+  </body>
+</html>
